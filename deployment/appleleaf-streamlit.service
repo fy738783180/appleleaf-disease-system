@@ -1,0 +1,16 @@
+[Unit]
+Description=AppleLeaf Streamlit App
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/opt/appleleaf-streamlit/app
+Environment=CLS_MODEL_PATH=/opt/appleleaf-streamlit/app/models/vit_resnet_multi_task_model.pth
+Environment=SEG_MODEL_PATH=/opt/appleleaf-streamlit/app/models/ld_deeplabv3plus_best_model_3.pth
+ExecStart=/opt/appleleaf-streamlit/venv/bin/streamlit run /opt/appleleaf-streamlit/app/app.py --server.address 0.0.0.0 --server.port 8501
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

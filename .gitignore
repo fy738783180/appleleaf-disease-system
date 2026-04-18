@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Model weights
+*.pth
+*.pt
+models/*.pth
+models/*.pt
+
+# Streamlit
+.streamlit/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Local deployment output
+deploy_bundle/
