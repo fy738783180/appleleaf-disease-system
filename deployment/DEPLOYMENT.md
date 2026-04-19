@@ -82,6 +82,13 @@ sudo ufw allow 8501/tcp
 http://YOUR_SERVER_IP:8501
 ```
 
+If you place Nginx in front of Streamlit and reverse proxy `80 -> 127.0.0.1:8501`,
+the public URL can be simplified to:
+
+```text
+http://YOUR_SERVER_IP/
+```
+
 ## Notes
 
 - If you already run VPN, Nginx, or HTTPS services on `443`, use a different application port such as `8501`
