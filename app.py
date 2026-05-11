@@ -112,10 +112,10 @@ class ResNetFeatureExtractor(nn.Module):
 class ViTWithResNetFeatures(nn.Module):
     def __init__(self, num_classes=9):
         super().__init__()
-        resnet_model = models.resnet101(weights=None)
+        resnet_model = models.resnet101(weights=models.ResNet101_Weights.DEFAULT)
         self.resnet_feature_extractor = ResNetFeatureExtractor(resnet_model)
 
-        self.vit = timm.create_model("vit_base_patch16_224", pretrained=False)
+        self.vit = timm.create_model("vit_base_patch16_224", pretrained=True)
         self.resnet_features_dim = 2048
         self.vit_features_dim = self.vit.head.in_features
         self.vit.head = nn.Identity()
