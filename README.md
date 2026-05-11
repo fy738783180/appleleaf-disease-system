@@ -131,4 +131,4 @@ export SEG_MODEL_PATH=/your/path/ld_deeplabv3plus_best_model_3.pth
 
 ## 作者
 
-涛哥
+fang jiang tao
