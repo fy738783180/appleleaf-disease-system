@@ -10,7 +10,13 @@
 
 ## 项目截图
 
-![Demo Screenshot](assets/screenshots/demo-panel.png)
+完整页面效果图（来自线上部署）:
+
+![Live Demo Page](assets/screenshots/live-demo-page.png)
+
+分割结果示例:
+
+![Segmentation Demo](assets/screenshots/demo-panel.png)
 
 ## 功能特点
 
@@ -49,6 +55,7 @@ appleleaf-disease-system/
 ├─ requirements.txt
 ├─ assets/
 │  └─ screenshots/
+│     ├─ live-demo-page.png
 │     └─ demo-panel.png
 ├─ deployment/
 │  ├─ appleleaf-streamlit.service
